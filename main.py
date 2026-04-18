@@ -9,7 +9,7 @@ import src.part2_plot_examples as part2
 import src.part3_bar_hist as part3
 import src.part4_catplot as part4
 import src.part5_scatter as part5
-
+import logging
 def main():
     ##  PART 1: ETL  ##
     # ETL the datasets into dataframes
@@ -29,13 +29,12 @@ def main():
     part2.scatterplot(pred_universe)
 
     ##  PART 3: BAR PLOTS AND HISTOGRAMS  ##
-    # 1
+    part3.barplot_fta(pred_universe)
+    part3.barplot_fta_sex(pred_universe)
+    part3.histogram_age(pred_universe)
+    part3.histogram_age_bins(pred_universe)
+    
 
-    # 2
-
-    # 3
-
-    # 4
 
     ##  PART 4: CATEGORICAL PLOTS  ##
     # 1
