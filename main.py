@@ -37,11 +37,16 @@ def main():
 
 
     ##  PART 4: CATEGORICAL PLOTS  ##
+    print("PART 4: CATEGORICAL PLOTS answers:")
+
     # 1
-    
+    part4.catplot_felony(pred_universe)
+
     # 2
+    part4.catplot_nonfelony(pred_universe)
 
     # 3
+    part4.catplot_felony_hue(pred_universe)
 
     ##  PART 5: SCATTERPLOTS  ##
     # 1
