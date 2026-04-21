@@ -42,6 +42,8 @@ import os
 def catplot_felony(pred_universe):
     """
     Plot prediction for felony rearrest by charge type.
+    args:        pred_universe: dataframe with prediction universe data
+    returns:     None, saves plot as PNG file
     """
     sns.catplot(
         data = pred_universe,
@@ -56,6 +58,8 @@ def catplot_felony(pred_universe):
 def catplot_nonfelony(pred_universe):
     """
     Plot prediction for nonfelony rearrest by charge type.
+    args:        pred_universe: dataframe with prediction universe data
+    returns:     None, saves plot as PNG file
     """
 
     sns.catplot(
@@ -79,6 +83,8 @@ def catplot_nonfelony(pred_universe):
 def catplot_felony_hue(pred_universe):
     """
     Plot felony rearrest by charge type with actual felony rearrest as hue.
+    args:        pred_universe: dataframe with prediction universe data
+    returns:     None, saves plot as PNG file
     """
 
     sns.catplot(

@@ -49,9 +49,12 @@ def main():
     part4.catplot_felony_hue(pred_universe)
 
     ##  PART 5: SCATTERPLOTS  ##
+    print("PART 5: SCATTERPLOTS answers:")
     # 1
+    part5.scatter_charge_type(pred_universe)
     
     # 2
+    part5.scatter_calibration(pred_universe)
 
 
 if __name__ == "__main__":

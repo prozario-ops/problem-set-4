@@ -24,10 +24,11 @@ def extract_transform():
     Extracts and transforms data from arrest records for analysis
 
     Returns:
-        - `pred_universe`: The dataframe containing prediction-related data for individuals
+        - `pred_universe`: The dataframe containing prediction-related data for individuals, felony_charge column merged in
         - `arrest_events`: The dataframe containing arrest event data
         - `charge_counts`: A dataframe with counts of charges aggregated by charge degree
         - `charge_counts_by_offense`: A dataframe with counts of charges aggregated by both charge degree and offense category
+        
     """
     # Extracts arrest data CSVs into dataframes
     pred_universe = pd.read_csv('https://www.dropbox.com/scl/fi/a2tpqpvkdc8n6advvkpt7/universe_lab9.csv?rlkey=839vsc25njgfftzakr34w2070&dl=1')
@@ -37,7 +38,7 @@ def extract_transform():
     felony_charge = (
     arrest_events
     .groupby('arrest_id')
-    .apply(lambda x: (x['charge_degree'].str.lower() == 'felony').any())
+    .apply(lambda x: x['charge_degree'].str.lower().str.contains('f').any())
     .reset_index(name='has_felony_charge')
 )
     # merge with pred_universe
